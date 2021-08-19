@@ -19,9 +19,13 @@
 <div class="convert-cont">
   <Button
     on:click={() => {
-      const jsJSON = `${$JsonInput}`;
-      const finalTypes = json2ts(jsJSON);
-      $TypesInput = finalTypes;
+      try {
+        const jsJSON = `${$JsonInput}`;
+        const finalTypes = json2ts(jsJSON);
+        $TypesInput = finalTypes;
+      } catch (error) {
+        $TypesInput = "Error Occured Because of Wrong JSON";
+      }
     }}
     style="padding: 15px;"
     kind="danger-tertiary">Convert</Button
