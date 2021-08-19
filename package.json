@@ -9,6 +9,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "carbon-components-svelte": "^0.42.2",
     "json-ts": "^1.6.4",
