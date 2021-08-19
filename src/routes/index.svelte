@@ -11,11 +11,6 @@
   import { json2ts } from "json-ts";
 </script>
 
-<main class="body">
-  <div class="left-side"><Json /></div>
-  <div class="right-side"><Types /></div>
-</main>
-
 <div class="convert-cont">
   <Button
     on:click={() => {
@@ -27,10 +22,14 @@
         $TypesInput = "Error Occured Because of Wrong JSON";
       }
     }}
-    style="padding: 15px;"
+    style="padding: 15px; border-radius: 5px;"
     kind="danger-tertiary">Convert</Button
   >
 </div>
+<main class="body">
+  <div class="left-side"><Json /></div>
+  <div class="right-side"><Types /></div>
+</main>
 
 <style>
   .body {

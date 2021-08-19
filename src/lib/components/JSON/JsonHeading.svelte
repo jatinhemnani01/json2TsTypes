@@ -3,6 +3,9 @@
 </div>
 
 <style>
+  h3 {
+    text-align: center;
+  }
   div {
     padding: 10px;
   }
