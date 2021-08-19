@@ -4,17 +4,25 @@
 
 <script lang="ts">
   import Json from "$lib/components/JSON/Json.svelte";
-  import { JsonInput } from "$lib/stores/Json";
+  import Types from "$lib/components/Types/Types.svelte";
   import { Button } from "carbon-components-svelte";
+  import { JsonInput } from "$lib/stores/Json";
+  import { TypesInput } from "$lib/stores/Types";
 </script>
 
 <main class="body">
   <div class="left-side"><Json /></div>
-  <div class="right-side">Flex 2</div>
+  <div class="right-side"><Types /></div>
 </main>
 
 <div class="convert-cont">
-  <Button style="padding: 15px;" kind="danger-tertiary">Convert</Button>
+  <Button
+    on:click={() => {
+      $TypesInput = $JsonInput;
+    }}
+    style="padding: 15px;"
+    kind="danger-tertiary">Convert</Button
+  >
 </div>
 
 <style>
