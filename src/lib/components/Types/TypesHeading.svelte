@@ -1,5 +1,5 @@
 <div>
-  <h3>Enter Your JSON Below</h3>
+  <h3>Copy Your Types Below</h3>
 </div>
 
 <style>

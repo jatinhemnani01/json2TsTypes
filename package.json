@@ -1,5 +1,5 @@
 {
-  "name": "~TODO~",
+  "name": "json2ts_types",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -11,6 +11,7 @@
   "devDependencies": {
     "@sveltejs/kit": "next",
     "carbon-components-svelte": "^0.42.2",
+    "json-ts": "^1.6.4",
     "svelte": "^3.34.0",
     "svelte-check": "^2.0.0",
     "svelte-preprocess": "^4.0.0",

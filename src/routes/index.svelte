@@ -8,6 +8,7 @@
   import { Button } from "carbon-components-svelte";
   import { JsonInput } from "$lib/stores/Json";
   import { TypesInput } from "$lib/stores/Types";
+  import { json2ts } from "json-ts";
 </script>
 
 <main class="body">
@@ -18,7 +19,9 @@
 <div class="convert-cont">
   <Button
     on:click={() => {
-      $TypesInput = $JsonInput;
+      const jsJSON = `${$JsonInput}`;
+      const finalTypes = json2ts(jsJSON);
+      $TypesInput = finalTypes;
     }}
     style="padding: 15px;"
     kind="danger-tertiary">Convert</Button
@@ -38,7 +41,7 @@
 
   .right-side {
     flex: 1;
-    background-color: darkblue;
+    background-color: teal;
   }
 
   .convert-cont {
