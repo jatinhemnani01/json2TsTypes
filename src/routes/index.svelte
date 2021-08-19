@@ -41,6 +41,7 @@
   .left-side {
     flex: 1;
     background-color: darkred;
+    border-right: solid 1px white;
   }
 
   .right-side {
