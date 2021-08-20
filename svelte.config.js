@@ -13,12 +13,6 @@ const config = {
     //adapter: node(),
     adapter: static_adapter(),
 
-    // Comment the paths if wants to run in dev mode.
-    paths: {
-      base: "/svelte-kit-blog-demo",
-      assets: "/svelte-kit-blog-demo",
-    },
-
     // hydrate the <div id="svelte"> element in src/app.html
     target: "#svelte",
   },
