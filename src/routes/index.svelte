@@ -8,20 +8,25 @@
   import { Button } from "carbon-components-svelte";
   import { JsonInput } from "$lib/stores/Json";
   import { TypesInput } from "$lib/stores/Types";
-  import { json2ts } from "json-ts";
+  import JsonToTS from "json-to-ts";
+
+  function convertToTs() {
+    try {
+      let typesContainer = [];
+      const finalMethod = JsonToTS(JSON.parse($JsonInput)).forEach((TI) => {
+        typesContainer.push(TI);
+      });
+      let finalTypes = typesContainer.join("\n\n");
+      $TypesInput = finalTypes;
+    } catch (error) {
+      $TypesInput = "Wrong JSON Format";
+    }
+  }
 </script>
 
 <div class="convert-cont">
   <Button
-    on:click={() => {
-      try {
-        const jsJSON = `${$JsonInput}`;
-        const finalTypes = json2ts(jsJSON);
-        $TypesInput = finalTypes;
-      } catch (error) {
-        $TypesInput = "Error Occured Because of Wrong JSON";
-      }
-    }}
+    on:click={convertToTs}
     style="padding: 15px; border-radius: 5px;"
     kind="danger-tertiary">Convert</Button
   >
