@@ -12,9 +12,11 @@
   </div>
 
   <div style="margin-right: 40px;" class="nav-links">
-    <a href="//github.io/jo_geek" target="_blank">Github</a>
-    <a href="https://www.buymeacoffee.com/jatinhemnani01" target="_blank"
-      >Buy Me A Coffee</a
+    <a rel="noreferrer" href="//github.io/jo_geek" target="_blank">Github</a>
+    <a
+      rel="noreferrer"
+      href="https://www.buymeacoffee.com/jatinhemnani01"
+      target="_blank">Buy Me A Coffee</a
     >
   </div>
 </div>
