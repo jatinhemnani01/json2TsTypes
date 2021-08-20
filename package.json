@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "rm -rf build && svelte-kit build && touch .svelte-kit/static/build/.nojekyll",
     "preview": "svelte-kit preview",
-    "deploy": "node ./gh-pages.js",
+    "deploy": "npm run build && npx gh-pages -d .svelte-kit/static/build -t true",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
