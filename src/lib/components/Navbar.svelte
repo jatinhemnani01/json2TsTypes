@@ -12,7 +12,11 @@
   </div>
 
   <div style="margin-right: 40px;" class="nav-links">
-    <a rel="noreferrer" href="//github.io/jo_geek" target="_blank">Github</a>
+    <a
+      rel="noreferrer"
+      href="https://github.com/jatinhemnani01/json2TsTypes"
+      target="_blank">Github</a
+    >
     <a
       rel="noreferrer"
       href="https://www.buymeacoffee.com/jatinhemnani01"
