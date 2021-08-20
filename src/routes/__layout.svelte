@@ -3,6 +3,7 @@
   import Navbar from "$lib/components/Navbar.svelte";
   import "carbon-components-svelte/css/g100.css";
   import Seo from "$lib/components/Seo.svelte";
+  // import SvelteSeo from "svelte-seo";
 </script>
 
 <!-- FOR SEO -->
